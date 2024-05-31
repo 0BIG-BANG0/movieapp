@@ -25,3 +25,26 @@ class.
 The super keyword calls the constructor of the parent class. In our case the call to
 super passes the props argument to the constructor of React.Component class and
 saves the return value for the derived class component.
+
+9. use arrow function on onClick function to skip binding
+10. addStars() - we use setState() - \\ 1. Updates the state
+                                     \\ 2. re-renders the component   (this is the main reason of setState that on a click it re-renders in UI)
+
+11. Apply Logic on add and minusStar() 
+
+# Asynchronous
+
+# Nature of this.setState is asynchronous and true for both form
+ ###      Summary -  1. this.setState updates the state asynchronously.
+ ###                 2. The immediate console.log logs the old state.
+ ###                 3. The callback inside this.setState logs the new state after the update.
+
+# Batching
+## 1st Form
+
+### IF we write multiple this .setState What reat will do is it will batch it into 1 and consider the last this.setState.
+
+## 2nd Form
+
+### in second form it takes previous state as an argument so when multiple call are it updates it rerenders it with the updated value.
+## If it is called 3 times then on one Click 1.5 will be there.
